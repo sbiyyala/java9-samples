@@ -12,8 +12,3 @@
 ## New Deployment strategy
 1. Java 8 vs Java 9 ways, memory footprints
 ## What's deprecated
-
-
-
-
-
