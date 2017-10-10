@@ -19,3 +19,6 @@
 1. Current naming convention of samples doesn't scale; needs a round of refactor
 2. Interplay between LOGGER and sysout is turning out to be hairy; refactor
 3. The stream examples are all in one class, should be in a package of their own
+
+## continue here
+1. https://stackoverflow.com/questions/20746429/limit-a-stream-by-a-predicate
