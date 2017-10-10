@@ -38,11 +38,24 @@ public class StreamsApiDriver {
 
         System.out.println("Stream funneling: Java9");
         System.out.println(funnel_J9(ids, lessThan5));
+
+        System.out.println("Stream funneling(negative Predicate): Java8");
+        System.out.println(drop_J8(ids, lessThan5));
+        System.out.println("Stream funneling(negative Predicate): Java9");
+        System.out.println(drop_J9(ids, lessThan5));
     }
 
     private static List<Integer> funnel_J9(List<Integer> ids, Predicate<Integer> lessThan5) {
+
         return ids.stream()
                 .takeWhile(lessThan5)
+                .collect(Collectors.toList());
+    }
+
+    private static List<Integer> drop_J9(List<Integer> ids, Predicate<Integer> lessThan5) {
+
+        return ids.stream()
+                .dropWhile(lessThan5)
                 .collect(Collectors.toList());
     }
 
@@ -50,6 +63,14 @@ public class StreamsApiDriver {
 
         return ids.stream()
                 .filter(lessThan5)
+                .collect(Collectors.toList());
+    }
+
+    private static List<Integer> drop_J8(List<Integer> ids, Predicate<Integer> lessThan5) {
+
+        Predicate<Integer> moreThan = x -> !lessThan5.test(x);
+        return ids.stream()
+                .filter(moreThan)
                 .collect(Collectors.toList());
     }
 
