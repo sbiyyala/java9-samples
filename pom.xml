@@ -25,6 +25,6 @@
         </plugins>
     </build>
     <modules>
-        <module>java8</module>
+        <module>prej9</module>
     </modules>
 </project>
