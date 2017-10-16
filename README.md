@@ -8,10 +8,10 @@
 2. process API
 3. HTTP Client API: implements HTTP/2 & WebSocket
 ## New language features
-1. Try-with-resources example
-2. Underscore example: what's in it for the future
-3. private interface methods
-4. Collection Factory methods
+JEP 213: 
+1. http://openjdk.java.net/jeps/213
+2. http://docs.oracle.com/javase/9/whatsnew/toc.htm#JSNEW-GUID-825576B5-203C-4C8D-85E5-FFDA4CA0B34
+* Convenience Factory Methods for Collections
 ## New Deployment strategy
 1. Java 8 vs Java 9 ways, memory footprints
 ## What's deprecated
