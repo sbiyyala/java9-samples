@@ -1,38 +1,40 @@
 package jug.api;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.logging.Logger;
+import java.util.*;
 
-import static java.lang.String.valueOf;
+import static java.util.Arrays.asList;
+import static java.util.Collections.unmodifiableSet;
 
 /**
  * Created by shishir.biyyala on 10/8/17.
  */
 public class ApiDriver {
 
-    private static final Logger LOGGER = Logger.getLogger(valueOf(ApiDriver.class));
+    private static final Set<String> DAYS_OF_WEEK_J8 = unmodifiableSet(new HashSet<>(asList("MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN")));
+
+    private static final Set<String> DAYS_OF_WEEK_J9 = Set.of("MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN");
 
     public static void main(String args[]) {
 
-        LOGGER.info(String.format("List of integers before java 9 %s",
+        System.out.println(String.format("Immutable List of integers before java 9 %s",
                 getImmutableListOfIds_before()));
 
-        LOGGER.info(String.format("List of integers using the new factory: %s",
+        System.out.println(String.format("Immutable List of integers using the new factory: %s",
                 getImmutableListOfIds_java9()));
+
+        System.out.println(String.format("Immutable Set of integers before java 9 %s",
+                DAYS_OF_WEEK_J8));
+
+        System.out.println(String.format("Immutable Set of integers using the new factory: %s",
+                DAYS_OF_WEEK_J9));
     }
 
-    private static List<Integer> getImmutableListOfIds_before() {
-        List<Integer> ids = new ArrayList<>();
-        ids.add(1);
-        ids.add(2);
-        ids.add(3);
 
-        return Collections.unmodifiableList(ids);
+    private static List<Integer> getImmutableListOfIds_before() {
+        return Collections.unmodifiableList(asList(1, 2, 3));
     }
 
     private static List<Integer> getImmutableListOfIds_java9() {
-        return List.of(1, 2,  3);
+        return List.of(1, 2, 3);
     }
 }
