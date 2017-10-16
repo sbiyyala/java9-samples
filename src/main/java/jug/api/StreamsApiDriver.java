@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 public class StreamsApiDriver {
 
@@ -43,48 +44,68 @@ public class StreamsApiDriver {
         System.out.println(drop_J8(ids, lessThan5));
         System.out.println("Stream funneling(negative Predicate): Java9");
         System.out.println(drop_J9(ids, lessThan5));
+
+        System.out.println("Count of elements in sorted collection obeying a predicate: Java8");
+        System.out.println(funnelCount_J8(ids, lessThan5));
+        System.out.println("Count of elements in sorted collection obeying a predicate: Java9");
+        System.out.println(funnelCount_J9(ids, lessThan5));
+    }
+
+    private static long funnelCount_J9(List<Integer> ids, Predicate<Integer> lessThan5) {
+
+        return ids.stream()
+                .takeWhile(lessThan5)
+                .count();
+    }
+
+    private static long funnelCount_J8(List<Integer> ids, Predicate<Integer> lessThan5) {
+
+        return ids.stream()
+                .filter(lessThan5)
+                .count();
     }
 
     private static List<Integer> funnel_J9(List<Integer> ids, Predicate<Integer> lessThan5) {
 
         return ids.stream()
                 .takeWhile(lessThan5)
-                .collect(Collectors.toList());
+                .collect(toList());
     }
 
     private static List<Integer> drop_J9(List<Integer> ids, Predicate<Integer> lessThan5) {
 
         return ids.stream()
                 .dropWhile(lessThan5)
-                .collect(Collectors.toList());
+                .collect(toList());
     }
 
     private static List<Integer> funnel_J8(List<Integer> ids, Predicate<Integer> lessThan5) {
 
         return ids.stream()
                 .filter(lessThan5)
-                .collect(Collectors.toList());
+                .collect(toList());
     }
 
     private static List<Integer> drop_J8(List<Integer> ids, Predicate<Integer> lessThan5) {
 
-        Predicate<Integer> moreThan = x -> !lessThan5.test(x);
+        Predicate<Integer> moreThan = elem -> !lessThan5.test(elem);
         return ids.stream()
                 .filter(moreThan)
-                .collect(Collectors.toList());
+                .collect(toList());
     }
 
     private static List<String> filterOutNulls_J9(List<String> names) {
 
         return names.stream()
                 .filter(Objects::nonNull)
-                .collect(Collectors.toList());
+                .collect(toList());
     }
 
     private static List<String> filterOutNulls_J8(List<String> names) {
+
         return names.stream()
                 .flatMap(Stream::ofNullable)
-                .collect(Collectors.toList());
+                .collect(toList());
     }
 
     // becomes hairy when used with a filter
