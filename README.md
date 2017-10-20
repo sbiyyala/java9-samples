@@ -4,7 +4,7 @@
 
 1. Stream API:
    1. iterate-filter-consumer
-   2. Stream vs Optional: Optional is a special kind of stream : https://aboullaite.me/java-9-enhancements-optional-stream/
+   2. Stream vs Optional: Optional is a special kind of stream
 2. process API
 3. HTTP Client API: implements HTTP/2 & WebSocket
 ## New language features
