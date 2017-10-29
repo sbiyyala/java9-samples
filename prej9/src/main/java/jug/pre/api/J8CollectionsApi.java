@@ -6,7 +6,6 @@ public class J8CollectionsApi {
     public static void main(String args[]) {
 
         System.out.println(String.format("Immutable List of integers before java 9: %s", getImmutableListOfIds()));
-
         System.out.println(String.format("Immutable Set before java 9:  %s", getDaysOfWeek()));
     }
 
