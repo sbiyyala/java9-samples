@@ -22,3 +22,4 @@ JEP 213:
 
 ## Resources 
 1. https://www.javaworld.com/article/3169388/java-language/java-9s-other-new-enhancements-part-2.html
+2. https://www.jetbrains.com/help/idea/intellij-idea-viewing-modes.html
