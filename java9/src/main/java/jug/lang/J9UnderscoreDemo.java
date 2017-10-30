@@ -1,6 +1,6 @@
 package jug.lang;
 
-public class Underscore {
+public class J9UnderscoreDemo {
 
     public static void main(String[] args) {
         // underscore will possibly be used for function parameters you don't care about

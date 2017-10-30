@@ -3,12 +3,12 @@ package jug.lang;
 import java.util.Arrays;
 import java.util.List;
 
-public class SafeVarargsDemo {
+public class J9SafeVarargsDemo {
 
     // SafeVarargs must be used with methods that cannot be overridden
     public static void main(String[] args) {
 
-        SafeVarargsDemo o = new SafeVarargsDemo();
+        J9SafeVarargsDemo o = new J9SafeVarargsDemo();
         o.privateVarargsMethod(Arrays.asList("North", "South"),
                 Arrays.asList("Up", "Down"));
     }
