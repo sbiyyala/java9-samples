@@ -8,8 +8,10 @@ public class TryWithResources {
 
     public static void main(String[] args) {
 
-        try(BufferedReader reader = new BufferedReader(new StringReader("Try-With-Resources enhancement"));) {
-            System.out.println(reader.readLine());
+        BufferedReader reader = new BufferedReader(new StringReader("Try-With-Resources enhancement. " +
+                "Should be effectively final"));
+        try(BufferedReader finalReader = reader) {
+            System.out.println(finalReader.readLine());
         } catch (IOException e) {
             throw new RuntimeException("IO Exception occurred while reading");
         }

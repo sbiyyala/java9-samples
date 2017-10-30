@@ -9,9 +9,6 @@ public class SafeVarargsDemo {
         SafeVarargsDemo o = new SafeVarargsDemo();
         o.finalVarargsMethod(Arrays.asList("North", "South"),
                 Arrays.asList("Up", "Down"));
-        System.out.println("==============");
-        staticVarargsMethod(Arrays.asList("East", "West"),
-                Arrays.asList("Left", "Right"));
     }
 
     @SafeVarargs

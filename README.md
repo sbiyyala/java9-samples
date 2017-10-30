@@ -20,5 +20,5 @@ JEP 213:
 2. Interplay between LOGGER and sysout is turning out to be hairy; refactor
 3. The stream examples are all in one class, should be in a package of their own
 
-## continue here
-1. https://stackoverflow.com/questions/20746429/limit-a-stream-by-a-predicate
+## Resources 
+1. https://www.javaworld.com/article/3169388/java-language/java-9s-other-new-enhancements-part-2.html
