@@ -22,6 +22,7 @@ public interface PrivateInterfaceMethodsDemo {
     private List<Integer> compute(List<Integer> ids, Predicate<Integer> predicate, int limit) {
         return ids.stream()
                 .filter(predicate)
+                .distinct()
                 .limit(limit)
                 .collect(toList());
     }
