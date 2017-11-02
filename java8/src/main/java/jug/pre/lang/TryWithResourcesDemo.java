@@ -8,6 +8,7 @@ public class TryWithResourcesDemo {
 
     public static void main(String[] args) {
 
+        // todo: research more into this
         BufferedReader reader = new BufferedReader(new StringReader("Try-With-Resources enhancement. " +
                 "Should be effectively final"));
         try(BufferedReader finalReader = reader) {

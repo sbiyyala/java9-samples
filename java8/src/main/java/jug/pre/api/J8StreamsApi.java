@@ -14,8 +14,10 @@ public class J8StreamsApi {
 
         System.out.println("Stream-iterate in Java 8");
         // becomes hairy when used with a filter
-        Stream.iterate(3, x -> x + 1)
-                .limit(3)
+        // primes less than 100
+        // trial-error for J8, idiomatic for J9
+        Stream.iterate(1, x -> x * 2)
+                .limit(10)
                 .forEach(System.out::println);
 
         List<String> names = Arrays.asList("Gosling", null, "Crockford", "Rossum", null);
