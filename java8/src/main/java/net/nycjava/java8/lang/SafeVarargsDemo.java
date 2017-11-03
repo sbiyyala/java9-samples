@@ -1,4 +1,4 @@
-package jug.pre.lang;
+package net.nycjava.java8.lang;
 
 import java.util.Arrays;
 import java.util.List;

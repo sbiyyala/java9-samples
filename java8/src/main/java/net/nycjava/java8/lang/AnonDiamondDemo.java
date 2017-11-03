@@ -1,9 +1,9 @@
-package jug.lang;
+package net.nycjava.java8.lang;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class J9AnonDiamondDemo {
+public class AnonDiamondDemo {
 
     public static void main(String[] args) {
         // Using diamond with anon inner classes not supported, doing so would require extensions
@@ -11,7 +11,7 @@ public class J9AnonDiamondDemo {
         // Compiler-internal types which cannot be written in a Java Program are called non-denotable types
         String[] daysOfWeek = {"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};
 
-        Iterator<String> iterator = new Iterator<>() {
+        Iterator<String> iterator = new Iterator<String>() {
             int idx = 0;
 
             @Override

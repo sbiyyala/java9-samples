@@ -1,4 +1,4 @@
-package jug.pre.api;
+package net.nycjava.java8.api;
 
 import java.util.AbstractMap.SimpleEntry;
 import java.util.Collections;

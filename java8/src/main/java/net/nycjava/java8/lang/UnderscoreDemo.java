@@ -1,4 +1,4 @@
-package jug.pre.lang;
+package net.nycjava.java8.lang;
 
 public class UnderscoreDemo {
 

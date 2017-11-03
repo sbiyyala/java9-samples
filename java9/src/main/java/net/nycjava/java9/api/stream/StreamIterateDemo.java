@@ -1,4 +1,4 @@
-package jug.api.stream;
+package net.nycjava.java9.api.stream;
 
 import java.util.stream.Stream;
 

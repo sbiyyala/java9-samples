@@ -1,4 +1,4 @@
-package jug.pre.api.stream;
+package net.nycjava.java8.api.stream;
 
 import java.util.stream.IntStream;
 
