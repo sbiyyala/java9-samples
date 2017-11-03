@@ -4,21 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Predicate;
-import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
 public class J8StreamsApi {
 
     public static void main(String[] args) {
-
-        System.out.println("Stream-iterate in Java 8");
-        // becomes hairy when used with a filter
-        // primes less than 100
-        // trial-error for J8, idiomatic for J9
-        Stream.iterate(1, x -> x * 2)
-                .limit(10)
-                .forEach(System.out::println);
 
         List<String> names = Arrays.asList("Gosling", null, "Crockford", "Rossum", null);
 

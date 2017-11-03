@@ -11,10 +11,6 @@ public class J9StreamsApi {
     public static void main(String[] args) {
 
 
-        System.out.println("Stream-iterate-filter in Java 9");
-        Stream.iterate(1, x -> x <= 3, x -> x + 1)
-                .forEach(System.out::println);
-
         List<String> names = List.of("Gosling", null, "Crockford", "Rossum", null);
 
         System.out.println("Filter out nulls java 9");
