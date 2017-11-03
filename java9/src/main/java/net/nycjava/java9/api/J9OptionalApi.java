@@ -18,6 +18,13 @@ public class J9OptionalApi {
         List<Integer> ids = List.of(1, 2, 3, 4, 5);
         System.out.println("======= J9 =======");
         System.out.println(getStudentNames(ids));
+
+        // jane -> [50, 78, 95], john -> [43, 85, 73], joe -> []
+        // stream()
+        // .map( entry -> entry.getValue().min() )
+        // .flatMap(Optional::stream)
+        // min()
+
     }
 
     private static List<String> getStudentNames(Collection<Integer> ids) {

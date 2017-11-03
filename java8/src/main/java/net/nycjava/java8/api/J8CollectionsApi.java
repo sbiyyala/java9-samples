@@ -10,7 +10,7 @@ public class J8CollectionsApi {
     }
 
     private static List<Integer> getImmutableListOfIds() {
-        return Collections.unmodifiableList(Arrays.asList(1, 2, 3));
+        return Collections.unmodifiableList(Arrays.asList(1, 2, 3)); // static import
     }
 
     private static Set<String> getDaysOfWeek() {

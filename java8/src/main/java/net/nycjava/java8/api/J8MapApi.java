@@ -18,14 +18,17 @@ public class J8MapApi {
             }});
 
     public static void main(String[] args) {
+
+        // SB - please inline as appropriate to make it easy to walk through the code from top to bottom
+
         System.out.println(idToNames);
-        System.out.println("=== OR ====");
+        System.out.println("=== OR ====");  // remove clutter where possible
         System.out.println(getIdToNames());
     }
 
     private static Map<Integer, String> getIdToNames() {
 
-        return Collections.unmodifiableMap(Stream.of(
+        return Collections.unmodifiableMap(Stream.of( // static import
                 new SimpleEntry<>(1, "Gosling"),
                 new SimpleEntry<>(2, "Crockford"),
                 new SimpleEntry<>(3, "Odersky"),

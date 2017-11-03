@@ -4,7 +4,8 @@ import java.util.Map;
 
 public class J9MapApi {
 
-    private static final Map<Integer, String> idToNames = Map.of(1, "Gosling",
+    private static final Map<Integer, String> idToNames = Map.of(
+            1, "Gosling",
             2, "Crockford",
             3, "Odersky",
             4, "Crockford");
