@@ -20,8 +20,6 @@ public class J8StreamsApi {
         System.out.println(filterOutNulls(names));
 
         Predicate<Integer> lessThan5 = x -> x < 5;
-        System.out.println("Stream funneling: Java8");
-        System.out.println(funnel(ids, lessThan5));
 
         System.out.println("Stream funneling(negative Predicate): Java8");
         System.out.println(drop(ids, lessThan5));
@@ -34,13 +32,6 @@ public class J8StreamsApi {
 
         return names.stream()
                 .filter(Objects::nonNull)
-                .collect(toList());
-    }
-
-    private static List<Integer> funnel(List<Integer> ids, Predicate<Integer> lessThan5) {
-
-        return ids.stream()
-                .filter(lessThan5)
                 .collect(toList());
     }
 

@@ -10,7 +10,6 @@ public class J9StreamsApi {
 
     public static void main(String[] args) {
 
-
         List<String> names = List.of("Gosling", null, "Crockford", "Rossum", null);
 
         System.out.println("Filter out nulls java 9");
@@ -19,9 +18,6 @@ public class J9StreamsApi {
         // TODO: comment on performance implications
         List<Integer> ids = List.of(1, 2, 3, 4, 5, 6, 7, 8);
         Predicate<Integer> lessThan5 = x -> x < 5;
-
-        System.out.println("Stream funneling: Java9");
-        System.out.println(funnel(ids, lessThan5));
 
         System.out.println("Stream funneling(negative Predicate): Java9");
         System.out.println(drop(ids, lessThan5));
@@ -36,14 +32,7 @@ public class J9StreamsApi {
                 .takeWhile(lessThan5)
                 .count();
     }
-
-    private static List<Integer> funnel(List<Integer> ids, Predicate<Integer> lessThan5) {
-
-        return ids.stream()
-                .takeWhile(lessThan5)
-                .collect(toList());
-    }
-
+    
     private static List<Integer> drop(List<Integer> ids, Predicate<Integer> lessThan5) {
 
         return ids.stream()
