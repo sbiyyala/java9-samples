@@ -9,6 +9,8 @@ public class J8PowersOfThree {
         IntStream.range(0, 10)
                 .forEach(x -> System.out.println(((int) Math.pow(3, x))));
 
+        System.out.println("=======");
+
         for (int i = 1; i <= 1000000; i = i * 3) {
             System.out.println(i);
         }
