@@ -3,7 +3,7 @@ package net.nycjava.java8.lang;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class AnonDiamondDemo {
+public class J8AnonDiamondDemo {
 
     public static void main(String[] args) {
         // Using diamond with anon inner classes not supported, doing so would require extensions

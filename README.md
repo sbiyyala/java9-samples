@@ -1,25 +1,14 @@
-# java9-samples
+# NYC-JUG Java-9
 
 ## API changes
-
-1. Stream API:
-   1. iterate-filter-consumer
-   2. Stream vs Optional: Optional is a special kind of stream
-2. process API
-3. HTTP Client API: implements HTTP/2 & WebSocket
+1. Collections/Map API
+2. Optional API
+3. Stream API
 ## New language features
-JEP 213: 
-1. http://openjdk.java.net/jeps/213
-2. http://docs.oracle.com/javase/9/whatsnew/toc.htm#JSNEW-GUID-825576B5-203C-4C8D-85E5-FFDA4CA0B34
-* Convenience Factory Methods for Collections
+1. Diamond Operator for Anons
+2. SafeVarargs
+3. Try-With
+4. Private-methods in Interfaces
 ## New Deployment strategy
-1. Java 8 vs Java 9 ways, memory footprints
-## What's deprecated
-## Tech debt
-1. Current naming convention of samples doesn't scale; needs a round of refactoring
-2. Interplay between LOGGER and sysout is turning out to be hairy; refactor
-3. The stream examples are all in one class, should be in a package of their own
-
-## Resources 
-1. https://www.javaworld.com/article/3169388/java-language/java-9s-other-new-enhancements-part-2.html
-2. https://www.jetbrains.com/help/idea/intellij-idea-viewing-modes.html
+1. jlinkdemo
+2. Memory footprint

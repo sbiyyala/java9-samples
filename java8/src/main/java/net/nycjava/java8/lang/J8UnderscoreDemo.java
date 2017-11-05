@@ -1,6 +1,6 @@
 package net.nycjava.java8.lang;
 
-public class UnderscoreDemo {
+public class J8UnderscoreDemo {
 
     public static void main(String[] args) {
         int _ = 10;

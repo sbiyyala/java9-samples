@@ -4,11 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
 
-public class TryWithResourcesDemo {
+public class J8TryWithResourcesDemo {
 
     public static void main(String[] args) {
 
-        // todo: research more into this
         BufferedReader reader = new BufferedReader(new StringReader("Try-With-Resources enhancement. " +
                 "Should be effectively final"));
         try(BufferedReader finalReader = reader) {

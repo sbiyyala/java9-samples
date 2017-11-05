@@ -3,10 +3,10 @@ package net.nycjava.java8.lang;
 import java.util.Arrays;
 import java.util.List;
 
-public class SafeVarargsDemo {
+public class J8SafeVarargsDemo {
 
     public static void main(String[] args) {
-        SafeVarargsDemo o = new SafeVarargsDemo();
+        J8SafeVarargsDemo o = new J8SafeVarargsDemo();
         o.finalVarargsMethod(Arrays.asList("North", "South"),
                 Arrays.asList("Up", "Down"));
     }

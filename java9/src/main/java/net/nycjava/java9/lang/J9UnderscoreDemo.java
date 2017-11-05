@@ -6,7 +6,7 @@ public class J9UnderscoreDemo {
         // underscore will possibly be used for function parameters you don't care about
         // [throwaway param, like in javascript]
 
-        // int _ = 10;
+        // int _ = 10; (fails!)
         int ten = 10;
         System.out.println(ten);
     }
