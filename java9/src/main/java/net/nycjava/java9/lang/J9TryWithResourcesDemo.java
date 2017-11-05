@@ -6,14 +6,11 @@ import java.io.StringReader;
 
 public class J9TryWithResourcesDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        BufferedReader reader = new BufferedReader(new StringReader("Try-With-Resources enhancement. " +
-                "Should be effectively final"));
+        BufferedReader reader = new BufferedReader(new StringReader("hello NYC Java"));
         try(reader) {
             System.out.println(reader.readLine());
-        } catch (IOException e) {
-            throw new RuntimeException("IO Exception occurred while reading");
         }
     }
 }
