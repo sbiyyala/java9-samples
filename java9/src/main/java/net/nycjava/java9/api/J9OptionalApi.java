@@ -1,6 +1,5 @@
 package net.nycjava.java9.api;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -8,34 +7,25 @@ import java.util.stream.Collectors;
 
 public class J9OptionalApi {
 
-    private static Map<Integer, String> idToName = Map.of(
-            1, "James Gosling",
-            2, "Joshua Bloch",
-            3, "Brian Goetz");
-
     public static void main(String[] args) {
 
-        List<Integer> ids = List.of(1, 2, 3, 4, 5);
-        System.out.println("======= J9 =======");
-        System.out.println(getStudentNames(ids));
+        Map<String, List<Integer>> semGradesOfStudents = Map.of(
+                "Jane", List.of(50, 75, 99),
+                "Kumar", List.of(75, 61, 100),
+                "John", List.of(),
+                "Bob", List.of(76, 76, 49),
+                "Xu", List.of()
+        );
 
-        // jane -> [50, 78, 95], john -> [43, 85, 73], joe -> []
-        // stream()
-        // .map( entry -> entry.getValue().min() )
-        // .flatMap(Optional::stream)
-        // min()
-
-    }
-
-    private static List<String> getStudentNames(Collection<Integer> ids) {
-
-        return ids.stream()
-                .map(J9OptionalApi::getStudentById)
+        // Least of each student
+        List<Integer> lowestGradesOfStudents = semGradesOfStudents.entrySet()
+                .stream()
+                .map(entry -> entry.getValue()
+                        .stream()
+                        .min(Integer::compareTo))
                 .flatMap(Optional::stream)
                 .collect(Collectors.toList());
-    }
 
-    private static Optional<String> getStudentById(Integer id) {
-        return Optional.ofNullable(idToName.get(id));
+        System.out.println(lowestGradesOfStudents);
     }
 }

@@ -3,10 +3,10 @@ package net.nycjava.java8.api;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Collections.unmodifiableMap;
+import static java.util.stream.Collectors.toMap;
 
 public class J8MapApi {
 
@@ -26,9 +26,7 @@ public class J8MapApi {
                         new SimpleEntry<>(2, "Crockford"),
                         new SimpleEntry<>(3, "Odersky"),
                         new SimpleEntry<>(4, "Crockford"))
-                        .collect(Collectors.toMap(
-                                SimpleEntry::getKey, SimpleEntry::getValue)
-                        ));
+                        .collect(toMap(SimpleEntry::getKey, SimpleEntry::getValue)));
 
         System.out.println(unmodifiableMap1);
         System.out.println(unmodifiableMap2);
