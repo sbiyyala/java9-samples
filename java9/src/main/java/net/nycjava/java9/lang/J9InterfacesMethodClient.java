@@ -5,9 +5,9 @@ import java.util.Collection;
 
 import static java.util.Arrays.asList;
 
-public class J9InterfacesMethodClientDemo {
+public class J9InterfacesMethodClient {
 
-    static class Foo extends ArrayList<Integer> implements J9InterfaceMethodsDemo<Integer> {
+    static class Foo extends ArrayList<Integer> implements J9InterfaceMethods<Integer> {
         public Foo(Collection<Integer> seed) {
             super(seed);
         }

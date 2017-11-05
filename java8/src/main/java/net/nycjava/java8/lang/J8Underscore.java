@@ -2,7 +2,7 @@ package net.nycjava.java8.lang;
 
 import java.util.function.Consumer;
 
-public class J8UnderscoreDemo {
+public class J8Underscore {
 
     public static void main(String[] args) {
 

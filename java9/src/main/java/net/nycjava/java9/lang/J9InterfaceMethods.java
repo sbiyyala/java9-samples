@@ -7,7 +7,7 @@ import static java.util.Comparator.naturalOrder;
 import static java.util.Comparator.reverseOrder;
 import static java.util.stream.Collectors.toList;
 
-public interface J9InterfaceMethodsDemo<T extends Comparable<T>> extends List<T> {
+public interface J9InterfaceMethods<T extends Comparable<T>> extends List<T> {
 
     default List<T> smallestN(int limit) {
         return firstN(naturalOrder(), limit);

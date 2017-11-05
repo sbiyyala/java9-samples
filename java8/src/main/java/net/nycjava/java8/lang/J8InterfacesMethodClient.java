@@ -1,15 +1,13 @@
 package net.nycjava.java8.lang;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 import static java.util.Arrays.asList;
 
-public class J8InterfacesMethodClientDemo {
+public class J8InterfacesMethodClient {
 
-    static class Foo extends ArrayList<Integer> implements J8InterfaceMethodsDemo<Integer> {
+    static class Foo extends ArrayList<Integer> implements J8InterfaceMethods<Integer> {
         public Foo(Collection<Integer> seed) {
             super(seed);
         }

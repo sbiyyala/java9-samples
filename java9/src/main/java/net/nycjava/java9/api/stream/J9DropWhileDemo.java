@@ -21,8 +21,8 @@ public class J9DropWhileDemo {
 //
 //        System.out.println(numberOfDaysAfterTheTemperatureReached50);
 
-        ofNullable("hello").findFirst();
-        Optional.ofNullable("hello").stream();
+        //ofNullable("hello").findFirst();
+        //Optional.ofNullable("hello").stream();
         System.out.println(concatName("Jim", null, "Fagan"));
     }
 

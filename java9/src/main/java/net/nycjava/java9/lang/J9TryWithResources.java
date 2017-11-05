@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
 
-public class J9TryWithResourcesDemo {
+public class J9TryWithResources {
 
     public static void main(String[] args) throws IOException {
 

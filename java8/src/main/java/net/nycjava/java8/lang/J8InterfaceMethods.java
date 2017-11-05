@@ -7,7 +7,7 @@ import static java.util.Comparator.naturalOrder;
 import static java.util.Comparator.reverseOrder;
 import static java.util.stream.Collectors.toList;
 
-public interface J8InterfaceMethodsDemo<T extends Comparable> extends List<T> {
+public interface J8InterfaceMethods<T extends Comparable> extends List<T> {
 
     default List<T> smallestN(int limit) {
         return firstN(this, naturalOrder(), limit);
@@ -17,7 +17,7 @@ public interface J8InterfaceMethodsDemo<T extends Comparable> extends List<T> {
         return firstN(this, reverseOrder(), limit);
     }
 
-    static <U extends Comparable<U>> List<U> firstN(J8InterfaceMethodsDemo<U> instance,
+    static <U extends Comparable<U>> List<U> firstN(J8InterfaceMethods<U> instance,
                                                     Comparator<U> comparator,
                                                     int limit) {
         return instance.stream()
