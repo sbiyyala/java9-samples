@@ -1,6 +1,6 @@
 #! /bin/bash
-jdkSize=`du -sh $JAVA_8_HOME/jre/`
+java8JreSize=`du -sh $JAVA_8_HOME/jre/`
 jlinkSize=`du -sh jlinkdemo`
-echo "JDK size: $jdkSize"
-echo "jlinkdemo size: $jlinkSize"
+echo "Java8 JDK size:  $java8JreSize"
+echo "jlinkdemo size:  $jlinkSize"
 
