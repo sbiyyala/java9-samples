@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import static java.lang.Thread.sleep;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
-public class J9ProcessDemo {
+public class J9Process {
     public static void main(String[] args) throws IOException, InterruptedException {
         Process process = new ProcessBuilder("ls", "-alR")
                 .start();

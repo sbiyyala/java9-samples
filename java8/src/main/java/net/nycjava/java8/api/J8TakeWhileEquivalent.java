@@ -1,4 +1,4 @@
-package net.nycjava.java8.api.stream;
+package net.nycjava.java8.api;
 
 import java.util.List;
 

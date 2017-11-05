@@ -1,8 +1,8 @@
-package net.nycjava.java9.api.stream;
+package net.nycjava.java9.api;
 
 import java.util.List;
 
-public class J9TakeWhileDemo {
+public class J9TakeWhile {
 
     public static void main(String[] args) {
 
