@@ -9,6 +9,7 @@ public class J9TryWithResourcesDemo {
     public static void main(String[] args) throws IOException {
 
         BufferedReader reader = new BufferedReader(new StringReader("hello NYC Java"));
+        // reader = new BufferedReader(new StringReader("Should be Effectively final!"));
         try(reader) {
             System.out.println(reader.readLine());
         }
