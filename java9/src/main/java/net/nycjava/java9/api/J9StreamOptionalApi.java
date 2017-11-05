@@ -10,11 +10,11 @@ public class J9StreamOptionalApi {
 
     public static void main(String[] args) {
 
-        System.out.println(concatName1("Douglas", null, "Crockford"));
-        System.out.println(concatName1("Guido", "Van", null));
+        System.out.println(concatName1("Madonna", null, null));
+        System.out.println(concatName1("Guido", "Van", "Rossum"));
 
         System.out.println(concatName2("James", "Arthur", "Gosling"));
-        System.out.println(concatName2(null, "Doug", "Schmidt"));
+        System.out.println(concatName2("John", null, "Doe"));
     }
 
     // Stream#ofNullable
