@@ -19,7 +19,7 @@ public class J9InterfacesMethodClientDemo {
         // Given a list of ids, give me the smallest 5 distinct ids (ascending-order)
         System.out.println(foo.smallestN(4));
 
-        // Given a list of ids, give me the largest 5 disctinct ids (descending-order)
+        // Given a list of ids, give me the largest 5 distinct ids (descending-order)
         System.out.println(foo.largestN(3));
     }
 }
