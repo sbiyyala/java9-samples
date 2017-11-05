@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
 import static java.util.Collections.unmodifiableMap;
+import static java.util.stream.Collectors.toList;
 
 public class J8OptionalApi {
 
@@ -33,7 +34,7 @@ public class J8OptionalApi {
                         .min(Integer::compareTo))
                 .filter(Optional::isPresent)
                 .map(Optional::get)
-                .collect(Collectors.toList());
+                .collect(toList());
 
         System.out.println(lowestGradesOfStudents);
     }

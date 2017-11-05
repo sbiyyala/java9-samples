@@ -3,7 +3,8 @@ package net.nycjava.java9.api;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
 
 public class J9OptionalApi {
 
@@ -24,7 +25,7 @@ public class J9OptionalApi {
                         .stream()
                         .min(Integer::compareTo))
                 .flatMap(Optional::stream)
-                .collect(Collectors.toList());
+                .collect(toList());
 
         System.out.println(lowestGradesOfStudents);
     }
