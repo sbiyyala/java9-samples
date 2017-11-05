@@ -7,13 +7,13 @@ import static java.util.Comparator.naturalOrder;
 import static java.util.Comparator.reverseOrder;
 import static java.util.stream.Collectors.toList;
 
-public interface J9InterfaceMethodsDemo<T extends Comparable> extends List<T> {
+public interface J9InterfaceMethodsDemo<T extends Comparable<T>> extends List<T> {
 
-    default List<Integer> smallestN(int limit) {
+    default List<T> smallestN(int limit) {
         return firstN(naturalOrder(), limit);
     }
 
-    default List<Integer> largestN(int limit) {
+    default List<T> largestN(int limit) {
         return firstN(reverseOrder(), limit);
     }
 
