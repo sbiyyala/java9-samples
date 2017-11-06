@@ -13,6 +13,7 @@ public class J9TakeWhile {
                 .takeWhile(temp -> temp < 50)
                 .count();
 
-        System.out.println(numberOfDaysBeforeTheTemperatureReached50);
+        System.out.println("Number of Days Before Temperature Reached 50 in Jan : " +
+                numberOfDaysBeforeTheTemperatureReached50);
     }
 }

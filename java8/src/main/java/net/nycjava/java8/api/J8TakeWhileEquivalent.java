@@ -15,6 +15,7 @@ public class J8TakeWhileEquivalent {
             numberOfDaysBeforeTheTemperatureReached50++;
         }
 
-        System.out.println(numberOfDaysBeforeTheTemperatureReached50);
+        System.out.println("Number of Days Before Temperature Reached 50 in Jan : " +
+                numberOfDaysBeforeTheTemperatureReached50);
     }
 }
