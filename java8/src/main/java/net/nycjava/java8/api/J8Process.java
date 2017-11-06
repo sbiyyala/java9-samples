@@ -13,7 +13,7 @@ public class J8Process {
 
         new BufferedReader(new InputStreamReader(process.getInputStream()))
                 .lines()
-                .filter(l -> l.startsWith("./java9"))
+                .filter(l -> l.startsWith("./java8"))
                 .forEach(System.out::println);
     }
 }
