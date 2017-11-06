@@ -20,7 +20,7 @@ public class J9Process {
                         new ProcessBuilder("grep", "-E", ".*\\.java")));
 
         Process finalProcess = processes.get(1);
-        
+
         finalProcess.onExit()
                 .orTimeout(100, MILLISECONDS)
                 .thenAccept(p -> new BufferedReader(new InputStreamReader(p.getInputStream()))
